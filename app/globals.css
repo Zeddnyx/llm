@@ -5,14 +5,14 @@
 :root {
   --background: #ecdfcc;
   --foreground: #1e201e;
-  --darker: #222831;
+  --darker: #11120E;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #1e201e;
     --foreground: #ecdfcc;
-    --darker: #222831;
+    --darker: #11120E;
   }
 }
 
@@ -20,6 +20,13 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea:focus,
+textarea:active,
+input:focus,
+input:active {
+  outline: none !important;
 }
 
 @layer utilities {
