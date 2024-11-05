@@ -6,3 +6,9 @@ export const INITIAL_PROMPT = [
   "Write a unit test for this function ",
   "Make a component for ",
 ];
+
+export const USER_CONTEXT = {
+  role: "frontend developer",
+  stack: ["Next.js", "TypeScript", "Tailwind CSS", "Nvim", "Vim"],
+  preferences: ["clean UI", "simple", "optimized performance"],
+};

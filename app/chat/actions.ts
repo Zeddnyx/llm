@@ -5,7 +5,7 @@ import { createStreamableValue } from "ai/rsc";
 
 export async function continueConversation(history: Message[]) {
   const stream = createStreamableValue();
-  const model = ollama("llama3.2");
+  const model = ollama("qwen:1.8b");
 
   (async () => {
     const { textStream } = await streamText({
