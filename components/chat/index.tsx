@@ -76,7 +76,7 @@ export default function Home() {
           <textarea
             ref={refInput}
             id="input"
-            className="px-3 py-2 rounded-lg text-neutral-200 max-w-2xl bg-darker"
+            className="px-3 py-2 rounded-lg text-foreground max-w-2xl shadow-input"
             value={input}
             placeholder="Ask me anything..."
             onChange={(e) => setInput(e.target.value)}

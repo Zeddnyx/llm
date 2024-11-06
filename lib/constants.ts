@@ -1,10 +1,10 @@
 export const INITIAL_PROMPT = [
   "You are expert in ",
   "I got this error. ",
-  "Could u summarize this ",
-  "Where is the bug in this code? ",
+  "Summarize this ",
   "Write a unit test for this function ",
   "Make a component for ",
+  "Translate this text to English ",
 ];
 
 export const USER_CONTEXT = {
