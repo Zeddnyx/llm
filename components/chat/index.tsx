@@ -45,7 +45,7 @@ export default function Home() {
     }, 1000);
   };
 
-  const handleInitial = (text: string) => {
+  const handleInitialInput = (text: string) => {
     setInput(text);
     refInput.current?.focus();
   };
@@ -58,17 +58,18 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-dvh relative flex-col items-center justify-start p-24">
+    <main className="flex h-dvh overflow-y-scroll relative flex-col items-center justify-start p-24">
       {conversation?.length > 1 ? (
         <Conversation
           conversation={conversation}
+          handleInitialInput={handleInitialInput}
           handleCopy={handleCopy}
           isCopy={isCopy}
         />
       ) : (
-        <Initial handleInitial={handleInitial} />
+        <Initial handleInitial={handleInitialInput} />
       )}
-      <div className="w-full h-20 fixed left-0 right-0 bottom-10 transition-all duration-150 group">
+      <div className="w-full bg-background h-28 fixed left-0 right-0 bottom-0 transition-all duration-150 group">
         <form
           onSubmit={handleSubmit}
           className="w-full px-3 py-2 flex items-center justify-center"
@@ -76,9 +77,9 @@ export default function Home() {
           <textarea
             ref={refInput}
             id="input"
-            className="px-3 py-2 rounded-lg text-foreground max-w-2xl shadow-input"
+            className="px-3 py-2 rounded-lg text-foreground bg-primary max-w-md hover:max-w-2xl border border-neutral-500 transition-all duration-300"
             value={input}
-            placeholder="Ask me anything..."
+            placeholder="Type your message here..."
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(event: React.KeyboardEvent) => handleKeyDown(event)}
           />

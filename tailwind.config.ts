@@ -12,6 +12,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        light: "var(--light)",
         primary: {
           DEFAULT: "var(--primary)",
           100: "var(--primary-100)",
@@ -28,7 +29,8 @@ const config: Config = {
       },
     },
     boxShadow: {
-      input: "0 0 0 1px #3c3836",
+      input: "0 0 0 1px #282828",
+      'input-light': "0 0 0 1px #d5c4a1",
     }
   },
   plugins: [],
